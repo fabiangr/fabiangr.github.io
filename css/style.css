@@ -179,11 +179,14 @@ h1, h2, h3, h4 {
     font-weight: 500;
     font-size: 0.95rem;
     transition: color 0.3s ease;
+    /* Schützt den Kontrast auf hellen Bildbereichen im transparenten Zustand */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Wenn gescrollt, wechselt die Schriftfarbe zum dunklen Anthrazit passend zum hellen Hintergrund */
 .navbar.scrolled .nav-links a {
     color: var(--color-primary);
+    text-shadow: none;
 }
 
 .navbar.scrolled .nav-links a:hover {
