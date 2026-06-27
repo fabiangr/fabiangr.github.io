@@ -4,10 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fabian Grote | IT Beratung</title>
-    <!-- Einbindung der Google Fonts -->
+    <meta name="description" content="Professionelle IT-Beratung von Fabian Grote in Bremen. Jetzt anfragen!">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://fabiangrote.de/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fabiangrote.de/">
+    <meta property="og:title" content="Fabian Grote | IT Beratung">
+    <meta property="og:description" content="Professionelle IT-Beratung in Bremen">
+    <meta property="og:image" content="https://fabiangrote.de/img/logo.svg">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 </head>
@@ -16,7 +26,7 @@
 <!-- Fixierte Navigation -->
 <nav class="navbar">
     <div class="nav-container">
-        <a href="#home" class="nav-logo">
+        <a href="#home" class="nav-logo" aria-label="Fabian Grote Startseite">
             <img src="img/logo.svg" alt="Fabian Grote Logo">
         </a>
 
@@ -41,17 +51,17 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <h1>Hallo, ich bin Fabian</h1>
-        <p>IT Beratung mit klarem Fokus und moderner Struktur.</p>
+        <p>Ich biete IT Beratung mit klarem Fokus und moderner Struktur</p>
         <a href="#leistungen" class="cta-button">Mehr erfahren</a>
     </div>
 </header>
 
 <main>
     <!-- 2. Leistungen -->
-    <section id="leistungen" class="content-section">
+    <section id="leistungen" class="content-section" aria-labelledby="heading-leistungen">
         <div class="container">
             <span class="section-tagline">Was ich anbiete</span>
-            <h2>Leistungen</h2>
+            <h2 id="heading-leistungen">Leistungen</h2>
 
             <div class="quote-box">
                 <p class="quote-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."</p>
@@ -68,14 +78,14 @@
     </section>
 
     <!-- 3. Über mich -->
-    <section id="ueber-mich" class="content-section alt-bg">
+    <section id="ueber-mich" class="content-section alt-bg" aria-labelledby="heading-uebermich">
         <div class="container profile-grid">
             <div class="profile-image-wrapper">
                 <img src="img/portrait.jpg" alt="Fabian Grote Porträt" class="profile-image">
             </div>
             <div class="profile-text">
                 <span class="section-tagline">Einblicke</span>
-                <h2>Über mich</h2>
+                <h2 id="heading-uebermich">Über mich</h2>
                 <p>Hier steht Platz für deinen persönlichen Werdegang oder deine Philosophie zur Verfügung. Erzähle deinen Kunden, wer du bist, was dich antreibt und warum du der richtige Partner für ihre IT-Herausforderungen bist.</p>
                 <p>Der Text lässt sich flexibel erweitern und passt sich dank modernem CSS-Grid-Layout auf Smartphones und Tablets automatisch an.</p>
             </div>
@@ -83,10 +93,10 @@
     </section>
 
     <!-- 4. Kontakt -->
-    <section id="kontakt" class="content-section">
+    <section id="kontakt" class="content-section" aria-labelledby="heading-kontakt">
         <div class="container text-center">
             <span class="section-tagline">Lass uns sprechen</span>
-            <h2>Kontakt</h2>
+            <h2 id="heading-kontakt">Kontakt</h2>
             <p class="contact-lead">Hast du ein Projekt im Kopf oder benötigst Unterstützung? So erreichst Du mich:</p>
 
             <div class="contact-details">
