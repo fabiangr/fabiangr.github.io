@@ -101,13 +101,10 @@
 
             <div class="contact-details">
                 <div class="contact-item">
-                    <strong>Telefon:</strong> <span><a href="tel:+491636846068" style="color: inherit; text-decoration: none;"> +49 163 6846068</a></span>
-                </div>
-                <div class="contact-item">
                     <strong>E-Mail:</strong> <span><a href="mailto:fbngrt@posteo.de" style="color: inherit; text-decoration: none;"> fbngrt@posteo.de</a></span>
                 </div>
                 <div class="contact-item">
-                    <strong>Standort:</strong> <span>Bremen (Remote & Vor-Ort)</span>
+                    <strong>Standort:</strong> <span>Bremen (Remote & vor Ort)</span>
                 </div>
             </div>
         </div>
@@ -117,7 +114,7 @@
 <!-- 5. Footer mit CC-Lizenz -->
 <footer>
     <div class="container footer-content">
-        <p></p>
+        <p><a href="#impressum" id="impressum-open">Impressum</a></p>
         <p class="license-text">
             Inhalte dieser Webseite stehen unter der Lizenz
             <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de" target="_blank" rel="noopener">CC BY-SA 4.0</a>.
@@ -125,7 +122,27 @@
     </div>
 </footer>
 
+<div id="impressum-modal" class="modal" aria-hidden="true" role="dialog">
+    <div class="modal-content">
+        <button id="impressum-close" class="modal-close-btn" aria-label="Schließen">&times;</button>
+
+        <h2>Impressum</h2>
+        <p><strong>Angaben gemäß § 5 TMG</strong></p>
+        <p>Fabian Grote<br>
+            IT Beratung<br>
+            Neustadtscontrescarpe 128<br>
+            28199 Bremen</p>
+
+        <h3>Kontakt</h3>
+        <p>E-Mail: fbngrt@posteo.de</p>
+
+        <h3>Wirtschafts-ID</h3>
+        <p>[Wirtschafts-ID]</p>
+    </div>
+</div>
+
 <!-- JavaScript am Ende einbinden -->
-<script src="js/script.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/impressum.js"></script>
 </body>
 </html>
