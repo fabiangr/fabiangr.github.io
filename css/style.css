@@ -472,6 +472,7 @@ footer a {
 
 footer a:hover {
     color: var(--color-accent-mint);
+    text-decoration: underline;
 }
 
 /* ==========================================================================
