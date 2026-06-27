@@ -241,6 +241,17 @@ h1, h2, h3, h4 {
     margin-bottom: 3rem;
 }
 
+.content-section a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.content-section a:hover {
+    color: var(--color-text-light);
+    text-decoration: underline;
+}
+
 .alt-bg {
     background-color: #f3f5f4;
 }
