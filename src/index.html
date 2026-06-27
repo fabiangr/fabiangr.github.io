@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabian Grote | IT Beratung</title>
+    <!-- Einbindung der Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+<!-- Fixierte Navigation -->
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="#home" class="nav-logo">
+            <img src="img/logo.svg" alt="Fabian Grote Logo">
+        </a>
+
+        <!-- Neuer Hamburger-Button für Mobilgeräte -->
+        <button class="menu-toggle" id="mobile-menu-btn" aria-label="Menü öffnen">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <ul class="nav-links" id="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#leistungen">Leistungen</a></li>
+            <li><a href="#ueber-mich">Über mich</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- 1. Hero-Bereich -->
+<header id="home" class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Hallo, ich bin Fabian</h1>
+        <p>IT Beratung mit klarem Fokus und moderner Struktur.</p>
+        <a href="#leistungen" class="cta-button">Mehr erfahren</a>
+    </div>
+</header>
+
+<main>
+    <!-- 2. Leistungen -->
+    <section id="leistungen" class="content-section">
+        <div class="container">
+            <span class="section-tagline">Was ich anbiete</span>
+            <h2>Leistungen</h2>
+
+            <div class="quote-box">
+                <p class="quote-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."</p>
+                <span class="quote-author">— Fokus & Effizienz</span>
+            </div>
+
+            <ul class="bullet-list">
+                <li>Strategische IT-Beratung und Architektur moderner Systeme</li>
+                <li>Konzeption, Entwicklung und Optimierung von Webanwendungen</li>
+                <li>Analyse bestehender IT-Infrastrukturen und Cloud-Migrationen</li>
+                <li>Projektmanagement und agile Begleitung von Entwicklerteams</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 3. Über mich -->
+    <section id="ueber-mich" class="content-section alt-bg">
+        <div class="container profile-grid">
+            <div class="profile-image-wrapper">
+                <img src="img/portrait.jpg" alt="Fabian Grote Porträt" class="profile-image">
+            </div>
+            <div class="profile-text">
+                <span class="section-tagline">Einblicke</span>
+                <h2>Über mich</h2>
+                <p>Hier steht Platz für deinen persönlichen Werdegang oder deine Philosophie zur Verfügung. Erzähle deinen Kunden, wer du bist, was dich antreibt und warum du der richtige Partner für ihre IT-Herausforderungen bist.</p>
+                <p>Der Text lässt sich flexibel erweitern und passt sich dank modernem CSS-Grid-Layout auf Smartphones und Tablets automatisch an.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Kontakt -->
+    <section id="kontakt" class="content-section">
+        <div class="container text-center">
+            <span class="section-tagline">Lass uns sprechen</span>
+            <h2>Kontakt</h2>
+            <p class="contact-lead">Hast du ein Projekt im Kopf oder benötigst Unterstützung? So erreichst Du mich:</p>
+
+            <div class="contact-details">
+                <div class="contact-item">
+                    <strong>Telefon:</strong> <span>+49 (0) 123 456789</span>
+                </div>
+                <div class="contact-item">
+                    <strong>E-Mail:</strong> <span>kontakt at fabiangrote.de</span>
+                </div>
+                <div class="contact-item">
+                    <strong>Standort:</strong> <span>Bremen (Remote & Vor-Ort)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- 5. Footer mit CC-Lizenz -->
+<footer>
+    <div class="container footer-content">
+        <p></p>
+        <p class="license-text">
+            Inhalte dieser Webseite stehen unter der Lizenz
+            <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de" target="_blank" rel="noopener">CC BY-SA 4.0</a>.
+        </p>
+    </div>
+</footer>
+
+<!-- JavaScript am Ende einbinden -->
+<script src="js/script.js"></script>
+</body>
+</html>

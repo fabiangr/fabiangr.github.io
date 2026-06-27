@@ -1,0 +1,476 @@
+/* ==========================================================================
+   ZENTRALE ANPASSUNGEN (Farben & Schriften aus deinem Logo abgeleitet)
+   ========================================================================== */
+:root {
+    --font-headings: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+
+    --color-primary: #3d4a56;
+    --color-accent-blue: #a4c2d4;
+    --color-accent-mint: #add8ce;
+    --color-bg-warm: #fdfbf7;
+
+    --color-text-dark: #2c353d;
+    --color-text-light: #64748b;
+    --color-white: #ffffff;
+}
+
+/* ==========================================================================
+   BASIS STYLES
+   ========================================================================== */
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--color-text-dark);
+    background-color: var(--color-bg-warm);
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-headings);
+    color: var(--color-primary);
+    margin-top: 0;
+    font-weight: 700;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.section-tagline {
+    display: block;
+    font-family: var(--font-headings), sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-text-light);
+    margin-bottom: 0.5rem;
+}
+/* ==========================================================================
+   NAVIGATION BAR & HAMBURGER (Jetzt mit dynamischer Transparenz)
+   ========================================================================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent; /* Initial komplett transparent */
+    border-bottom: 1px solid rgba(255, 255, 255, 0); /* Kein Rahmen am Anfang */
+    z-index: 1000;
+    transition: all 0.4s ease; /* Sorgt für ein sanftes Überblenden der Farbe */
+}
+
+/* Diese Klasse wird per JavaScript hinzugefügt, sobald gescrollt wird */
+.navbar.scrolled {
+    background-color: rgba(253, 251, 247, 0.95); /* Das warme Off-White aus deinem Logo */
+    backdrop-filter: blur(10px); /* Edler Milchglas-Effekt */
+    border-bottom: 1px solid rgba(61, 74, 86, 0.08);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.2rem 2rem; /* Etwas mehr Luft im transparenten Zustand */
+    transition: padding 0.4s ease;
+}
+
+/* Wenn gescrollt, wird die Navbar für einen kompakteren Look etwas schmaler */
+.navbar.scrolled .nav-container {
+    padding: 0.8rem 2rem;
+}
+
+.nav-logo img {
+    height: 45px;
+    width: auto;
+    display: block;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--color-white); /* Weißer Text auf dem Hero-Bild, damit man es gut lesen kann */
+    font-family: var(--font-headings);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+/* Wenn gescrollt, wechselt die Schriftfarbe zum dunklen Anthrazit passend zum hellen Hintergrund */
+.navbar.scrolled .nav-links a {
+    color: var(--color-primary);
+}
+
+.navbar.scrolled .nav-links a:hover {
+    color: var(--color-text-light);
+}
+
+/* Hamburger-Strichfarben passen sich ebenfalls an */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1010;
+}
+
+.menu-toggle .bar {
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-white); /* Weiß auf dem Hero-Bild */
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled .menu-toggle .bar {
+    background-color: var(--color-primary); /* Dunkel im gescrollten Zustand */
+}
+
+/* ==========================================================================
+   1. HERO ELEMENT
+   ========================================================================== */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background-image: url('../img/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--color-white);
+    padding: 0 1rem;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(61, 74, 86, 0.6), rgba(44, 53, 61, 0.4));
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    color: var(--color-white);
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    font-family: var(--font-headings);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    background-color: var(--color-bg-warm);
+}
+
+/* ==========================================================================
+   SEKTIONEN & LAYOUT
+   ========================================================================== */
+.content-section {
+    padding: 8rem 0;
+}
+
+.content-section h2 {
+    font-size: 2.25rem;
+    margin-bottom: 3rem;
+}
+
+.alt-bg {
+    background-color: #f3f5f4;
+}
+
+/* ==========================================================================
+   2. LEISTUNGEN
+   ========================================================================== */
+.quote-box {
+    border-left: 4px solid var(--color-accent-mint);
+    padding: 1rem 0 1rem 2rem;
+    margin-bottom: 3.5rem;
+    background-color: rgba(173, 216, 206, 0.1);
+}
+
+.quote-text {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--color-primary);
+    margin: 0 0 0.5rem 0;
+}
+
+.quote-author {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-text-light);
+}
+
+.bullet-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bullet-list li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+}
+
+.bullet-list li::before {
+    content: "■";
+    position: absolute;
+    left: 0;
+    color: var(--color-accent-blue);
+    font-size: 0.9rem;
+    top: -1px;
+}
+
+/* ==========================================================================
+   3. ÜBER MICH
+   ========================================================================== */
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.profile-image-wrapper {
+    position: relative;
+}
+
+.profile-image-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--color-accent-blue);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.profile-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 2;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.profile-text p {
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ==========================================================================
+   4. KONTAKT
+   ========================================================================== */
+.contact-lead {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+    color: var(--color-text-light);
+}
+
+.contact-details {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.contact-item {
+    background: var(--color-white);
+    padding: 1.5rem 2.5rem;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+    border: 1px solid rgba(61, 74, 86, 0.05);
+}
+
+.contact-item strong {
+    display: block;
+    font-family: var(--font-headings);
+    color: var(--color-primary);
+    margin-bottom: 0.25rem;
+}
+
+/* ==========================================================================
+   5. FOOTER
+   ========================================================================== */
+footer {
+    background-color: var(--color-primary);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 3rem 0;
+    font-size: 0.9rem;
+    border-top: 4px solid var(--color-accent-mint);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+footer a {
+    color: var(--color-accent-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--color-white);
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   EIGENTLICHES RESPONSIVE DESIGN (Für Mobilgeräte & Tablets optimiert)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Menü-Button anzeigen */
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Navigations-Links in mobiles Overlay verwandeln */
+    .nav-links {
+        position: fixed;
+        top: 63px; /* Höhe der Navbar */
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 63px);
+        background-color: var(--color-bg-warm);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 3rem;
+        gap: 2rem;
+        transform: translateY(-150%); /* Versteckt das Menü außerhalb des Bildschirms */
+        transition: transform 0.4s cubic-bezier(0.1, 1, 0.1, 1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Klasse wird via JS hinzugefügt, um das Menü hineinzufahren */
+    .nav-links.active {
+        transform: translateY(0);
+    }
+
+    .nav-links a {
+        font-size: 1.3rem; /* Größere Klickflächen auf dem Smartphone */
+    }
+
+    /* Textgrößen verringern, damit nichts hässlich umbricht */
+    .hero-content h1 {
+        font-size: 2.3rem;
+    }
+
+    .hero-section {
+        background-attachment: scroll; /* Deaktiviert Parallax auf Handys (bessere Performance) */
+    }
+
+    .content-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Das zweispaltige Raster wird einspaltig */
+    .profile-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .profile-image-wrapper::before {
+        display: none; /* Verhindert Layout-Verschiebungen auf Mobilgeräten */
+    }
+
+    /* Kontaktdaten untereinander stapeln */
+    .contact-details {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .contact-item {
+        padding: 1.2rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .content-section {
+        padding: 5rem 0;
+    }
+}
