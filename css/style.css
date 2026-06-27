@@ -70,7 +70,6 @@
 }
 
 
-
 /* ==========================================================================
    BASIS STYLES
    ========================================================================== */
@@ -305,6 +304,7 @@ h1, h2, h3, h4 {
     color: var(--color-primary);
     font-weight: 500;
     transition: color 0.3s ease;
+    text-decoration: none;
 }
 
 .content-section a:hover,
@@ -449,15 +449,26 @@ footer {
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
 }
 
+.footer-logo {
+    height: 1rem;
+    vertical-align: text-top;
+}
+
+.footer-content > :last-child {
+    margin-left: auto; /* pushes it to the far side */
+    margin-right: 0;
+}
+
 footer a {
     color: var(--color-white);
     transition: color 0.3s ease;
+    text-decoration: none;
 }
 
 footer a:hover {
